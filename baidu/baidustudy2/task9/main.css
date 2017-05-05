@@ -1,0 +1,15 @@
+
+
+.project{margin-bottom: 8px;}
+.car>div,.project>div{height:357px;background: #fff;border:1px solid #ced1d4;border-radius: 5px;overflow: hidden;float:left;}
+h3.tt{height:41px;border-bottom:1px solid #e7e8eb;width:100%;background: #f4f5f6;line-height: 40px;padding-left: 20px;box-sizing:border-box;color:#aaa;}
+.project_tab{width:530px;margin-right: 8px;}
+.project_content{width:350px;}
+.project_tab_menu {padding-top: 12px;position:relative;height:27px;margin-left: 20px}
+.project_tab_menu li{float:left;margin-right: 3px;}
+.project_tab_menu label{cursor: pointer;width:86px;height:27px;display: block;text-align: center;line-height: 27px;background: #ededf0;border:1px solid #ededf0;border-radius: 5px 5px 0 0;color:#535353;}
+.project_tab_menu input,.project_tab_menu div{display: none;}
+.project_tab_menu table{width:100%;text-align: center;border-color:#dddddd;line-height: 28px;}
+.project_tab_menu table td:hover{background:#f4f6f7;}
+.project_tab_menu [id^='tab']:checked ~ [id^='tab_menu']{display: block;position:absolute;width:403px;border: 1px solid #cacbcb;border-radius:0 5px 5px;padding:28px 49px 35px 38px;left:0;top:40px;}
+.project_tab_menu [id^='tab']:checked~label{position: relative;z-index: 1;border:1px solid #cacbcb;border-bottom: none;background: #fff;height:28px;}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>响应式栅格化</title>
+	<style type="text/css">
+	*{
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+	}
+	.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+	.container{
+		width: 100%;
+		padding: 20px 0px 0px 20px;
+	}
+	.container div{
+			height: 50px;
+			border: 1px solid #999;
+			background-color:#eee;
+			box-sizing: border-box;
+			float: left;
+			margin: 10px;
+		}
+		.c3{
+				width:-webkit-calc(25% - 20px);
+			}
+
+		.c6{
+				width:-webkit-calc(50% - 20px);
+			}
+		@media screen and (min-width: 768px){
+			.c1{
+				width: -webkit-calc(8.33333% - 20px);
+			}
+			.c2{
+				width: -webkit-calc(16.66666% - 20px);
+			}
+			.c3{
+				width: -webkit-calc(25% - 20px);
+			}
+			.c4{
+				width: -webkit-calc(33.33% - 20px);
+			}
+			.c6{
+				width: -webkit-calc(50% - 20px);
+			}
+		}
+		@media screen and (max-width: 768px){
+			.cx6{
+				width: -webkit-calc(50%);
+			}
+			.cx12{
+				width: -webkit-calc(100% - 20px);
+			}
+			.cx2{
+				width: -webkit-calc(16.66666% - 20px);
+			}
+			.cx8{
+				width: -webkit-calc(66.66666% - 20px);
+			}
+			.cx3{
+				width: -webkit-calc(25% - 20px);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container clearifx">
+	<div class="c4 cx6"></div>
+	<div class="c4 cx6"></div>
+	<div class="c4 cx12"></div>
+	<div class="c3"></div>
+	<div class="c6"></div>
+	<div class="c3"></div>
+	<div class="c1 cx2"></div>
+	<div class="c1 cx2"></div>
+	<div class="c2 cx8"></div>
+	<div class="c2 cx3"></div>
+	<div class="c6 cx3"></div>
+</div>
+</body>
+</html>

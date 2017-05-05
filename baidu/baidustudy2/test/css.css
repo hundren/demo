@@ -1,0 +1,165 @@
+
+.right li{
+	float:left;
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 10px;
+	margin-left: 20px;
+	list-style: none;
+	text-decoration: underline;
+}
+.right span{
+	display: inline-block;
+	background: #3385ff;
+	color: white;
+	width: 60px;
+	height: 24px;
+	letter-spacing: 1px;
+	font-size: 8px;
+	text-align: center;
+	line-height: 24px;
+	margin-left: 20px;
+	margin-top: -11px;
+}
+.right {
+	position: absolute;
+	right: 0;
+	top:0;
+	margin: 10px 25px 0 0;
+}
+#lg{
+	text-align: center;
+}
+#lg{
+	margin-top: 50px;
+}
+#it{
+	border:1px solid #b6b6b6;
+	display: inline-block;
+	width: 539px;
+	height:34px;
+	border-color: #b8b8b8;
+	position: relative;
+	overflow: hidden;
+	vertical-align: top;
+	margin-right: -3px;
+}
+#it:focus{
+	border-color: #4791ff;
+}
+#ittt{
+	height: 22px;
+	width: 500px;
+	float: left;
+	margin:6px 0 0 6px;
+	outline: 0;
+	border: 0;
+	overflow: hidden;
+
+}
+#sb{
+	width: 100px;
+	height: 36px;
+	font-size: 15px;
+	background:#3385ff;
+	letter-spacing: 1px;
+    border:1px solid transparent;
+    outline: medium;
+    color:white;
+    -webkit-appearance:none;
+    -webkit-border-radius:0;
+}
+#sb:hover{
+	background-color: #317ef3;
+	box-shadow: 1px 1px 1px #ccc;
+	border-bottom: 1px solid #2868c8;
+}
+#sx{
+	text-align: center;
+	margin-top: 20px;
+}
+.soutu{
+	width:18px;
+	height: 16px;
+	position: absolute;
+	top:50%;
+    margin-top: -8px;
+    right: 11px;
+    background: #fff;
+    background:url(camera_new_679c15cc.png) no-repeat;
+    cursor: pointer;
+}
+.soutu:hover{
+	background-position:0 -20px; 
+}
+#bt{
+    position: absolute;
+    top: 500px;
+    margin:auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.text{
+	float: left;
+	text-align: left;
+	line-height: 17px;
+	margin: 5px 0 0 10px;
+}
+.quard{
+	float: left;
+	margin-right: 5px;
+}
+#q1,#q2{
+	float: left;
+}
+#q2{
+	margin-left: 33px;
+}
+#qrcode{
+	display: inline-block;
+}
+#backup{
+	display: inline-block;
+	color:#999;
+	text-align: left;
+	margin-left: 33px;
+	position: relative;
+	top: -2px;
+	line-height: 22px;
+}
+.jing{
+	width: 14px;
+	height: 17px;
+	display: inline-block;
+	overflow: hidden;
+	background:url(icons_0e814c16.png) ; 
+	background-position: -600px -96px;
+}
+.hui{
+	width: 14px;
+	height: 17px;
+	display: inline-block;
+	overflow: hidden;
+	background:url(icons_0e814c16.png) ; 
+	background-position: -623px -96px;
+}
+#backup p{
+	margin: 0;
+}
+.text p{
+	color: #999;
+}
+.text b{
+	color: #666;
+}
+#backup a{
+	text-decoration: underline;
+	margin-right: 11px;
+	cursor: auto;
+	color: #999;
+}
+body{
+	font-size: 12px;
+	font-family: arial;
+}

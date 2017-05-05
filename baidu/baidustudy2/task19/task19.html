@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task19-sort</title>
+	<style type="text/css">
+		#show{
+			display: flex;
+			height: 110px;
+			align-items: flex-end;
+			margin-top: 5px;
+			}
+		#show div{
+			margin-right: 5px;
+			
+		}
+	</style>
+</head>
+<body>
+	<input id="origin" type="text" name="number"></input>
+	<input type="button" name="confirm"  onclick="go();" value="yes"></input>
+	<div id="show"></div>
+</body>
+		<script type="text/javascript">
+
+		var num=document.getElementById("origin");
+		var show=document.getElementById("show");
+		var arr=new Array();
+		function go(){
+			var reg=/^\d+$/;
+			if(reg.test(num.value)&&num.value>=10&&num.value<=100){
+				if(arr.length>=60){
+					alert('Can not add any more' );
+					return;
+				}
+				arr.push(num.value);
+			}
+			else{
+				alert('Please input num between 10 to 100');
+			}
+
+			draw(arr.sort());
+		}
+		function draw(arr){
+			show.innerHTML="";
+			var text='';
+			for(var i=0;i<arr.length;i++){
+				text += '<div title="'+arr[i]+'" style="width:15px;height:'+arr[i]+'px; background-color:red"></div>';
+			}
+			show.innerHTML=text;
+		}
+	</script>
+</html>

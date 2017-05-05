@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex</title>
+	<style type="text/css">
+	*{
+		padding: 20px;
+		margin: 0px;
+	}
+		.contair{
+			display: flex;
+			display: -webkit-flex;
+			flex-flow: row wrap;
+			-webkit-justify-content: space-between;
+			-webkit-align-items: center;
+		}
+		.contair,.contair>div{
+			padding: 0;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+		}
+		#one,#two,#three{
+			border: 1px solid red;
+			width: 150px;
+		}
+		#four{
+			width: 150px;
+			border: 1px solid blue;
+		}
+		#one{
+			height: 120px;
+		}
+		#two{
+			height: 100px;
+		}
+		#three{
+			height: 40px;
+		}
+		#four{
+			height: 200px;
+		}
+
+@media all and (max-width: 640px) {
+    #four{
+                order: -2;
+    }
+    .contair {
+        -webkit-flex-wrap:wrap;
+           
+        -webkit-align-items: flex-start;
+        
+    }
+}
+	</style>
+</head>
+<body>
+<div class="contair">
+	<div id="one">
+	</div>
+	<div id="two">
+	</div>
+	<div id="three">
+	</div>
+	<div id="four">
+	</div>
+</div>
+</body>
+</html>

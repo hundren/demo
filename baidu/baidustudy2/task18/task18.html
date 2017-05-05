@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>baidu-task18</title>
+	<style type="text/css">
+		#show div{
+			margin-top: 10px;
+			float: left;
+			margin-right: 5px;
+			background-color: red;
+			color:white;
+			height: 30px;
+			padding: 2px;
+		}
+	</style>
+		<script type="text/javascript">
+		window.onload=function(){	
+			var origin=document.getElementById('origin');
+			var show=document.getElementById('show');
+		}
+		function leftin(){
+			if(checknum()){
+				return;
+			}
+			var newdiv=document.createElement('div');
+          		newdiv.innerHTML=origin.value;
+          		newdiv.onclick=function(){
+          		show.removeChild(this);
+          	}
+           	show.insertBefore(newdiv,show.firstChild);
+		}
+		function rightin(){
+			if(checknum()){
+				return;
+			}
+			var newdiv=document.createElement('div');
+				newdiv.onclick=function(){
+          		show.removeChild(this);
+          	}
+          	newdiv.innerHTML=origin.value;
+           	show.appendChild(newdiv);
+		}
+		function leftout(){
+           	alert("第一个值为:"+show.firstChild.innerHTML);
+           	show.removeChild(show.firstChild);	
+		}
+		function rightout(){
+           	alert("最后一个值为:"+show.lastChild.innerHTML);
+           	show.removeChild(show.lastChild);	
+		}
+		//判断输入是不是数字
+		function checknum(){
+			var reg=/^\d+$/;
+			if(!origin.value){
+				alert("不能为空");
+				return true;
+			}
+			if(!reg.test(origin.value)){
+				alert("只能输入数字");
+				return true;
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<input id="origin" type="text" name=""></input>
+	<input type="button" name="" onclick="leftin();" value="左侧入"></input>
+	<input type="button" name="" onclick="rightin();" value="右侧入"></input>
+	<input type="button" name="" onclick="leftout();" value="左侧出"></input>
+	<input type="button" name="" onclick="rightout();" value="右侧出"></input>
+	<div id="show">
+		
+	</div>
+</body>
+
+</html>

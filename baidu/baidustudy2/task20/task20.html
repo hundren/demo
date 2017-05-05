@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task20</title>
+	<style type="text/css">
+		#show div{
+			margin-top: 10px;
+			float: left;
+			margin-right: 5px;
+			background-color: red;
+			color:white;
+			height: 30px;
+			padding: 2px;
+		}
+		.select{
+			color:blue;
+		}
+	</style>
+		
+</head>
+<body>
+
+	<textarea id="origin" rows="8" cols="30"placeholder="可以通过用回车，逗号（全角半角均可），顿号，空格（全角半角、Tab等均可）等符号作间隔"></textarea>
+	<input type="button" name="" onclick="insert();" value="插入"></input>
+	<input  id="search" type="text" name=""></input>
+	<input type="button" onclick="ss();" name="" value="查询"></input>
+	<div id="show">
+		
+	</div>
+</body>
+<script type="text/javascript">
+		
+			var origin=document.getElementById('origin');
+			var search=document.getElementById('search');
+			var show=document.getElementById('show');
+			var h1=new String("676767");
+		
+		function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
+
+		function insert(){
+			var origint=trimStr(origin.value);
+			var data=checktext(origint);
+			for(var i=0;i<data.length;i++){
+				var newdiv=document.createElement('div');
+          		newdiv.innerHTML=data[i];
+          		newdiv.onclick=function(){
+          			show.removeChild(this);
+          		}
+          	show.insertBefore(newdiv,show.lastChild);
+          	}
+           	origin.value='';
+		}
+		
+		//判断文本中是否有分隔符
+		function checktext(data){
+			// return data.split(/[,\r 、，\t]/);
+			return data.split(/[^0-9a-zA-Z\u4e00-\u9fa5]+/);
+		}
+	
+		//查询要匹配的文字
+		function ss(){
+			var s=show.childNodes;
+			var searchValue=trimStr(search.value);
+			for(var i=0;i<s.length;i++){
+				 //h1.replace(/6/g,"aaa");
+				 // h1=JSON.stringify(s[i].innerHTML);
+				 console.info(h1);
+				 h1=s[i].innerHTML;
+				   h1 = h1.replace(new RegExp(searchValue, "g"), "<span class='select'>" + searchValue + "</span>");
+				 s[i].innerHTML=h1;
+				 	// 	
+			}
+			
+		}
+	</script>
+</html>

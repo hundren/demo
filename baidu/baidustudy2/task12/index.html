@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css3</title>
+	<style type="text/css">
+		.stobig{
+			width: 100px;
+
+		}
+		.stobig:focus{
+			transition: width 2s;
+			width: 200px;
+		}
+		.qiehuan{
+		position: absolute;
+		bottom: 0;
+		right: 0;	
+		}
+		.gundong{
+			position: absolute;
+			margin-top: 10px;
+			border: 1px solid #000;
+			width: 200px;
+			height: 100px;
+		}
+		.qiehuan span{
+			background-color:red;
+		}
+		.pic1{
+			background-color: red;
+		}
+		.pic2{
+			background-color: blue;
+		}
+		.pic3{
+			background-color: green;
+		}
+	</style>
+</head>
+
+<body>
+	  <input class="stobig"></input>
+	  <div class="gundong">
+	  	 <div class="pic">
+	  	 	<div class="pic1"></div>
+	  	 	<div class="pic2"></div>
+	  	 	<div class="pic3"></div>
+	  	 </div>
+	  	 <div class="qiehuan">
+	  	 	<span class="one">1</span>
+	  	 	<span class="two">2</span>
+	  	 	<span class="three">3</span>
+	  	 </div>
+	  </div>
+</body>
+</html>

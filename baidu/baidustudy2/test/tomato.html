@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tomato time</title>
+	<meta name="timer" charset="UTF-8">
+		<script type="text/javascript">
+		var minuit=24;
+		var second=60;
+		var rminuit=4;
+		var rsecond=60;
+		function time(){//工作时间
+		var t=document.getElementById("time");
+			second--;
+			if(second<=0){
+				minuit--;
+				second=60;
+			}
+			if(second<10){
+				second="0"+second;
+			}
+			
+			t.innerHTML=minuit+":"+second;
+			if(minuit<=0){
+				minuit=24;
+				alert("该休息了");
+			}	
+		}
+		function relax(){//休息时间
+		var t=document.getElementById("time");
+			rsecond--;
+			if(rsecond<=0){
+				rminuit--;
+				rsecond=60;
+			}
+			if(rsecond<10){
+				rsecond="0"+rsecond;
+			}
+			
+			t.innerHTML=rminuit+":"+rsecond;
+			if(rminuit<=0){
+				rminuit=4;
+				alert("休息够了");
+			}	
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<div id="time">25:00</div>
+	<input id="work" type="button"  onClick="setInterval(time,1000)" value="开始"></input>
+	<input id="relax" type="button"  onClick="setInterval(relax,1000)" value="休息"></input>
+</body>
+</html>
