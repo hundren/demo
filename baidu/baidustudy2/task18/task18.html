@@ -16,9 +16,10 @@
 	</style>
 		<script type="text/javascript">
 		window.onload=function(){	
-			var origin=document.getElementById('origin');
-			var show=document.getElementById('show');
+			origin=document.getElementById('origin');
+			show=document.getElementById('show');
 		}
+
 		function leftin(){
 			if(checknum()){
 				return;
@@ -51,6 +52,8 @@
 		}
 		//判断输入是不是数字
 		function checknum(){
+			console.log(origin.value);
+			
 			var reg=/^\d+$/;
 			if(!origin.value){
 				alert("不能为空");
