@@ -1,0 +1,44 @@
+[class*='level-'] {
+    border: 1px solid #593c7f; }
+  
+  [class*='level-'] {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  
+  body {
+    font-family: "arial"; }
+  
+  [class*='level-'] {
+    background: #fff;
+    padding: 0 5px;
+    margin: 0 5px; }
+  
+  .level-1 {
+    height: 150px; }
+  
+  .level-2 {
+    height: 120px; }
+  
+  .level-3 {
+    height: 90px; }
+  
+  .level-4 {
+    height: 60px; }
+  
+  .level-5 {
+    height: 30px; }
+  
+  #box-container,
+  #traverse-container,
+  #search-container,
+  #insert-delete {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; }
+  
+  input {
+    margin: 0 5px; }
+  
+  /*# sourceMappingURL=main.css.map */
+  

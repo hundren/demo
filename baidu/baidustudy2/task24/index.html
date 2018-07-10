@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Binary Tree</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div id="wrapper">
+    <div id="box-container">
+        <div class="level-1" id="top-level">Super
+            <div class="level-2">Co
+                <div class="level-3">Apple
+                    <div class="level-4">Pear</div>
+                    <div class="level-4">Pig</div>
+                    <div class="level-4">Cola</div>
+                    <div class="level-4">Soccer</div>
+                </div>
+                <div class="level-3">Phone</div>
+                <div class="level-3">
+                    <div class="level-4">Book</div>
+                    <div class="level-4">School</div>
+                </div>
+            </div>
+            <div class="level-2">Note
+                <div class="level-3">Human
+                    <div class="level-4">Code</div>
+                    <div class="level-4">Operate</div>
+                    <div class="level-4">Man</div>
+                </div>
+                <div class="level-3">Program
+                    <div class="level-4">Element
+                        <div class="level-5">Cat</div>
+                    </div>
+                    <div class="level-4">Glass</div>
+                </div>
+            </div>
+            <div class="level-2">Fish</div>
+        </div>
+    </div>
+
+    <div id="insert-delete">
+        <input type="button" value="删除选中节点及其所有子节点" id="delete-btn">
+        <input type="text" id="insert-txt" placeholder="新添加节点的内容">
+        <input type="button" value="在选中节点下增加子节点" id="insert-btn">
+    </div>
+    <div id="traverse-container">
+    	<input type="button" value="遍历多叉树" id="preorder">
+    </div>
+
+    <div id="search-container">
+        <input type="text" id="search-txt" placeholder="要查询的内容">
+        <input type="button" value="开始查询" id="search-btn">
+    </div>
+</div>
+	
+
+    <script src="js/traversing.js"></script>
+</body>
+
+</html>
