@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    html,body{background: #273341;}
+    #mycanvas{}  
+    /* .pie{width: 320px;height: 320px;margin: 0 auto;} */
+    img{width: 100%;display: none}
+    .economy{text-align: center;transform: rotate(45deg);color: #fff;font-family: "微软雅黑";font-size: 14px;}
+</style>
+<body>
+   <div class="pie">       
+	<canvas id="canvas" width="960" height="960" style="width:960px;height:960px;"></canvas>
+   </div>
+<!-- canvas的画布宽高（分辨率）是width和height，而style中的宽高是canvas在页面中显示的宽高，画布分辨率越高，绘制出来的图任意缩放也不会出现很大的锯齿 -->
+</body>
+<script src="js/jquery-1.10.2.js"></script>
+<script>
+    // 圆心坐标
+    var circleCenter = {x:480,y:480};
+</script>
+<script src="common.js"></script>
+<script src="dataFiliter.js"></script>
+<script src="makeLine.js"></script>
+<script>
+// 模拟数据
+var mok_data = [
+    {
+        "信访来源": "市信访局",
+        "返回日期": "2013-04-28",
+        "信访人": "陈用深12",
+        "信访类型": "房产类",
+        "受理日期": "2013-03-27",
+        "信访区域": "禅城区",
+        "信访标题": "禅城区title1",
+        "登记时间": "2013-03-27",
+        "登记人": "陈翠婷",
+        "承办单位名称": " 房地产市场监管科 房产管理科 ",
+        "ID": "SDJSJID9467566",
+        "relationIndex": []
+    },
+    {
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深11",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "顺德区",
+		"信访标题": "顺德区title1",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+    },
+    {
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深10",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "禅城区",
+		"信访标题": "禅城区title2",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+    },
+    {
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深9",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "三水区",
+		"信访标题": "三水区title1",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+	},{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深8",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "高明区",
+		"信访标题": "高明区title1",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+    }
+    ,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深7",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "三水区",
+		"信访标题": "三水区title2",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+    }
+    ,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深6",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "禅城区",
+		"信访标题": "禅城区title3",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+    }
+    ,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深5",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "禅城区",
+		"信访标题": "禅城区title4",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+    }
+    ,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深4",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "高明区",
+		"信访标题": "高明区title2",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+    }
+    ,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深3",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "南海区",
+		"信访标题": "南海区title2",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+    }
+    ,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深2",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "南海区",
+		"信访标题": "南海区title4",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+    }
+    ,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深1",
+		"信访类型": "城镇拆迁",
+		"受理日期": "2013-03-27",
+		"信访区域": "顺德区",
+		"信访标题": "顺德区title4",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+	}
+	,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深1",
+		"信访类型": "建筑类",
+		"受理日期": "2013-03-27",
+		"信访区域": "顺德区",
+		"信访标题": "顺德区title4",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+	}
+	,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深1",
+		"信访类型": "房产类",
+		"受理日期": "2013-03-27",
+		"信访区域": "顺德区",
+		"信访标题": "顺德区title4444",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": " 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+	}
+	,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深1",
+		"信访类型": "工程招投标类",
+		"受理日期": "2013-03-27",
+		"信访区域": "顺德区",
+		"信访标题": "顺德区title4",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+	}
+	,{
+		"信访来源": "市信访局",
+		"返回日期": "2013-04-28",
+		"信访人": "陈用深1",
+		"信访类型": "人民防空工程类",
+		"受理日期": "2013-03-27",
+		"信访区域": "顺德区",
+		"信访标题": "顺德区title4",
+		"登记时间": "2013-03-27",
+		"登记人": "陈翠婷",
+		"承办单位名称": "禅城区国土城建和水务局 房地产市场监管科 房产管理科 ",
+		"ID": "SDJSJID9467566",
+		"relationIndex": []
+	}
+];
+// 数据整理
+// 合并重复地区和个数
+var areaCountArr = [],titleTypeArr = [];
+mok_data.forEach(function(e,i){
+	areaCountArr.push(e.信访区域);
+	titleTypeArr.push(e.信访类型);
+})
+var getCount = new getDoubleArr();
+var transAreaCount = getCount.getAreaDe(areaCountArr);
+
+var newSortData = mok_data.sort(compare("信访区域"));
+// 数据分类归类
+var transTitleTypeColor = getCount.getTypeColor(titleTypeArr);
+console.log('transTitleTypeCount',transTitleTypeColor);
+
+// -------------------------------------------------------
+var canvas = document.getElementById('canvas');  
+var r_area = 100,r_width=30;
+var r_title = 200; 
+var r_man = 380;
+var r_week = 280;
+var bgColor =  '#273341';
+var lineColor = '#f9f9f9';
+var ctx = canvas.getContext('2d');
+if (canvas.getContext){
+	// 先根据数据比例绘制扇形占比
+	function draw(angleSum){
+		transAreaCount.forEach(function(e){
+          ites(0,0,e.start,e.end,r_area,'#88acf0');
+          drawCircularText(r_area,e.area,rads(e.start+10),rads(e.end-10),'center');
+		})
+		//内覆盖扇形背景圆2
+		ites(0,0,0,360,r_area - r_width,bgColor);
+
+		// 绘制上方文字
+		var verticalDeArr = setPoint(newSortData);
+		newSortData.forEach(function(e,i){
+			drawVerticalText(e.信访标题,rads(verticalDeArr[i]),r_title+20,'title');
+			drawVerticalText(e.信访人,rads(verticalDeArr[i]),r_man+10,'man');
+			drawLine(rads(verticalDeArr[i]),r_man,40,['#fff','#333']);
+			drawTitlePoint(rads(verticalDeArr[i]),r_title+10);
+			// 周的基线
+			drawLine(rads(verticalDeArr[i]),r_title,r_title-r_area-5,lineColor);
+			// 渲染各周的长度
+			drawWeekLine(rads(verticalDeArr[i]),r_area,e.信访类型,e.返回日期,e.受理日期,e.登记时间,transTitleTypeColor);
+			newSortData[i].coordinate = changeDeToXy(r_area-r_width,rads(verticalDeArr[i]+angleSum));
+			newSortData[i].radian = verticalDeArr[i]+angleSum;
+		})
+		// console.log('newSortData',newSortData);
+		itesOutLine(0,360,r_man-10,lineColor);
+		// 周的2条线
+		itesOutLine(0,360,r_area+5,lineColor);
+		itesOutLine(0,360,r_title,lineColor);
+		
+	}
+	ctx.translate(circleCenter.x,circleCenter.y);  
+	draw(0);
+
+	// 渲染颜色
+	console.log('color',getCateColor('人民防空工程类',transTitleTypeColor));
+	coverCircle(0);
+
+
+}
+</script>
+<script src="control.js"></script>
+
+</html>
