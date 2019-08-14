@@ -1,0 +1,114 @@
+{
+    "status": "SUCCESS",
+    "data": {
+      "total": 100,
+      "pageSize": 10,
+      "currentPage": 1,
+      "list": [
+        {
+          "id": 1,
+          "cover": "//img.alicdn.com/bao/uploaded/i3/120976213/TB2O4nSnblmpuFjSZFlXXbdQXXa_!!120976213.jpg_240x240.jpg",
+          "userName": "角色1",
+          "url": "https://item.taobao.com/item.htm?id=558559528377",
+          "autharr": "['4', '6']",
+          "birthday": "2017-04-28",
+          "auth": "数据统计，文章管理，科目管理，账号管理，广告管理，预约管理，统计，缴费管理",
+          "trueName": "张三",
+          "operation": {
+            "edit": true
+          }
+        },
+        {
+          "id": 2,
+          "cover": "//img.alicdn.com/bao/uploaded/i4/TB1GiPSinJ_SKJjSZPiYXH3LpXa_M2.SS2_100x100.jpg",
+          "userName": "角色2",
+          "url": "https://item.taobao.com/item.htm?id=558559528377",
+          "autharr": "['4', '6']",
+          "birthday": "2017-04-28",
+          "auth": "文章管理，账号管理，广告管理，预约管理，统计，缴费管理",
+          "trueName": "张三",
+          "operation": {
+            "edit": true
+          }
+        },
+        {
+          "id": 3,
+          "cover": "//img.alicdn.com/bao/uploaded/i3/120976213/TB2O4nSnblmpuFjSZFlXXbdQXXa_!!120976213.jpg_240x240.jpg",
+          "userName": "角色3",
+          "url": "https://item.taobao.com/item.htm?id=558559528377",
+          "autharr": "['4', '6']",
+          "birthday": "2017-04-28",
+          "auth": "文章管理，科目管理，账号管理，广告管理，预约管理，统计，缴费管理",
+          "trueName": "张三",
+          "operation": {
+            "edit": true
+          }
+        },
+        {
+          "id": 4,
+          "cover": "//img.alicdn.com/bao/uploaded/i7/TB1QpMvk3n.PuJjSZFkYXI_lpXa_M2.SS2_100x100.jpg",
+          "userName": "角色4",
+          "url": "https://item.taobao.com/item.htm?id=558559528377",
+          "autharr": "['4', '6']",
+          "birthday": "2017-04-28",
+          "auth": "文章管理，科目管理，广告管理，预约管理，统计，缴费管理",
+          "trueName": "张三",
+          "operation": {
+            "edit": true
+          }
+        },
+        {
+          "id": 5,
+          "cover": "//img.alicdn.com/bao/uploaded/i4/120976213/TB2GiVsdS0mpuFjSZPiXXbssVXa_!!120976213.jpg_240x240.jpg",
+          "userName": "角色5",
+          "url": "https://item.taobao.com/item.htm?id=558559528377",
+          "autharr": "['4', '6']",
+          "birthday": "2017-04-28",
+          "auth": "文章管理，科目管理，账号管理，广告管理，统计，缴费管理",
+          "trueName": "张三",
+          "operation": {
+            "edit": true
+          }
+        },
+        {
+          "id": 6,
+          "cover": "//img.alicdn.com/bao/uploaded/i3/120976213/TB2bxHGtpXXXXXVXXXXXXXXXXXX_!!120976213.jpg_240x240.jpg",
+          "userName": "角色6",
+          "url": "https://item.taobao.com/item.htm?id=558559528377",
+          "autharr": "['4', '6']",
+          "birthday": "2017-04-28",
+          "auth": "文章管理，科目管理，账号管理，预约管理，统计，缴费管理",
+          "trueName": "张三",
+          "operation": {
+            "edit": true
+          }
+        },
+        {
+          "id": 7,
+          "cover": "https://img.alicdn.com/bao/uploaded/i4/120976213/TB2bEcHnXXXXXbgXXXXXXXXXXXX_!!120976213.jpg_100x100.jpg",
+          "userName": "角色1",
+          "url": "https://item.taobao.com/item.htm?id=558559528377",
+          "autharr": "['4', '6']",
+          "birthday": "2017-04-28",
+          "auth": "文章管理，科目管理，账号管理，广告管理，预约管理，统计",
+          "trueName": "张三",
+          "operation": {
+            "edit": true
+          }
+        },
+        {
+          "id": 8,
+          "cover": "//img.alicdn.com/bao/uploaded/i2/TB11DjAIFXXXXaTXFXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg",
+          "userName": "角色1",
+          "url": "https://item.taobao.com/item.htm?id=558559528377",
+          "autharr": "['4', '6']",
+          "birthday": "2017-04-28",
+          "auth": "咨询管理，广告管理，预约管理，统计，缴费管理",
+          "trueName": "张三",
+          "operation": {
+            "edit": true
+          }
+        }
+      ]
+    }
+  }

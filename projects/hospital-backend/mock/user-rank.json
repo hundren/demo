@@ -1,0 +1,65 @@
+{
+  "status": "SUCCESS",
+  "data": {
+    "total": 100,
+    "pageSize": 10,
+    "currentPage": 1,
+    "list": [
+      {
+        "id": "1",
+        "username": "Bruce",
+        "doctorname": "王医生",
+        "email": "test@admin.com",
+        "title": "很长很长的文章标题",
+        "articleNum": "10",
+        "commentNum": "1234",
+        "regTime": "2017-02-11",
+        "LastLoginTime": "2018-02-11"
+      },
+      {
+        "id": "2",
+        "username": "Alex",
+        "doctorname": "李医生",
+        "email": "test@admin.com",
+        "title": "很长很长的文章标题",
+        "articleNum": "29",
+        "commentNum": "121",
+        "regTime": "2017-02-11",
+        "LastLoginTime": "2018-02-11"
+      },
+      {
+        "id": "3",
+        "username": "Bob",
+        "doctorname": "林医生",
+        "email": "test@admin.com",
+        "title": "很长很长的文章标题",
+        "articleNum": "30",
+        "commentNum": "57",
+        "regTime": "2017-02-11",
+        "LastLoginTime": "2018-02-11"
+      },
+      {
+        "id": "4",
+        "username": "Charles",
+        "doctorname": "张医生",
+        "email": "test@admin.com",
+        "title": "很长很长的文章标题",
+        "articleNum": "89",
+        "commentNum": "12",
+        "regTime": "2017-02-11",
+        "LastLoginTime": "2018-02-11"
+      },
+      {
+        "id": "5",
+        "username": "Eric",
+        "doctorname": "冯医生",
+        "email": "test@admin.com",
+        "title": "很长很长的文章标题",
+        "articleNum": "38",
+        "commentNum": "3",
+        "regTime": "2017-02-11",
+        "LastLoginTime": "2018-02-11"
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "status": "SUCCESS",
+  "data": {
+    "total": 100,
+    "pageSize": 10,
+    "currentPage": 1,
+    "list": [
+      {
+        "id": 1,
+        "cover": "//img.alicdn.com/bao/uploaded/i3/120976213/TB2O4nSnblmpuFjSZFlXXbdQXXa_!!120976213.jpg_240x240.jpg",
+        "userName": "用户名1",
+        "url": "https://item.taobao.com/item.htm?id=558559528377",
+        "phone": "13445677890",
+        "birthday": "2017-04-28",
+        "sex": "男",
+        "trueName": "张三",
+        "card":"44057789881722341",
+        "operation": {
+          "edit": true
+        }
+      },
+      {
+        "id": 2,
+        "cover": "//img.alicdn.com/bao/uploaded/i4/TB1GiPSinJ_SKJjSZPiYXH3LpXa_M2.SS2_100x100.jpg",
+        "userName": "用户名2",
+        "url": "https://item.taobao.com/item.htm?id=558559528377",
+        "phone": "13445677890",
+        "birthday": "2017-04-28",
+        "sex": "男",
+        "trueName": "张三",
+        "card":"44057789881722341",
+        "operation": {
+          "edit": true
+        }
+      },
+      {
+        "id": 3,
+        "cover": "//img.alicdn.com/bao/uploaded/i3/120976213/TB2O4nSnblmpuFjSZFlXXbdQXXa_!!120976213.jpg_240x240.jpg",
+        "userName": "用户名3",
+        "url": "https://item.taobao.com/item.htm?id=558559528377",
+        "phone": "13445677890",
+        "birthday": "2017-04-28",
+        "sex": "男",
+        "trueName": "张三",
+        "card":"44057789881722341",
+        "operation": {
+          "edit": true
+        }
+      },
+      {
+        "id": 4,
+        "cover": "//img.alicdn.com/bao/uploaded/i7/TB1QpMvk3n.PuJjSZFkYXI_lpXa_M2.SS2_100x100.jpg",
+        "userName": "用户名4",
+        "url": "https://item.taobao.com/item.htm?id=558559528377",
+        "phone": "13445677890",
+        "birthday": "2017-04-28",
+        "sex": "男",
+        "trueName": "张三",
+        "card":"44057789881722341",
+        "operation": {
+          "edit": true
+        }
+      },
+      {
+        "id": 5,
+        "cover": "//img.alicdn.com/bao/uploaded/i4/120976213/TB2GiVsdS0mpuFjSZPiXXbssVXa_!!120976213.jpg_240x240.jpg",
+        "userName": "用户名5",
+        "url": "https://item.taobao.com/item.htm?id=558559528377",
+        "phone": "13445677890",
+        "birthday": "2017-04-28",
+        "sex": "男",
+        "trueName": "张三",
+        "card":"44057789881722341",
+        "operation": {
+          "edit": true
+        }
+      },
+      {
+        "id": 6,
+        "cover": "//img.alicdn.com/bao/uploaded/i3/120976213/TB2bxHGtpXXXXXVXXXXXXXXXXXX_!!120976213.jpg_240x240.jpg",
+        "userName": "用户名6",
+        "url": "https://item.taobao.com/item.htm?id=558559528377",
+        "phone": "13445677890",
+        "birthday": "2017-04-28",
+        "sex": "男",
+        "trueName": "张三",
+        "card":"44057789881722341",
+        "operation": {
+          "edit": true
+        }
+      },
+      {
+        "id": 7,
+        "cover": "https://img.alicdn.com/bao/uploaded/i4/120976213/TB2bEcHnXXXXXbgXXXXXXXXXXXX_!!120976213.jpg_100x100.jpg",
+        "userName": "用户名1",
+        "url": "https://item.taobao.com/item.htm?id=558559528377",
+        "phone": "13445677890",
+        "birthday": "2017-04-28",
+        "sex": "男",
+        "trueName": "张三",
+        "card":"44057789881722341",
+        "operation": {
+          "edit": true
+        }
+      },
+      {
+        "id": 8,
+        "cover": "//img.alicdn.com/bao/uploaded/i2/TB11DjAIFXXXXaTXFXXXXXXXXXX_!!0-item_pic.jpg_100x100.jpg",
+        "userName": "用户名1",
+        "url": "https://item.taobao.com/item.htm?id=558559528377",
+        "phone": "13445677890",
+        "birthday": "2017-04-28",
+        "sex": "男",
+        "trueName": "张三",
+        "card":"44057789881722341",
+        "operation": {
+          "edit": true
+        }
+      }
+    ]
+  }
+}
