@@ -1,0 +1,3 @@
+[submodule "phaser-game"]
+	path = phaser-game
+	url = https://github.com/hundren/phaser-game.git
